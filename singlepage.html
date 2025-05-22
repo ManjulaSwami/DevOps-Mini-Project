@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurvedic Remedies - Dashboard</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+
+<header>
+    <h1>
+        <img src="images/logo.png" alt="Logo" class="logo-img">
+        Ayurvedic Remedies Dashboard
+    </h1>
+</header>
+
+<nav>
+    <ul class="tabs">
+        <li onclick="showTab('remedies')">Symptom Remedies</li>
+        <li onclick="showTab('bmi')">BMI Calculator</li>
+        <li onclick="showTab('feedback')">Feedback</li>
+        <li onclick="handleLogout()">Logout</li>  <!-- Logout Tab -->
+    </ul>
+</nav>
+
+<!-- Content Section -->
+<section id="content">
+    <div id="remedies" class="tab-content">
+        <h2>Symptom Remedies</h2>
+        <form class="remedy-form" onsubmit="event.preventDefault(); searchRemedy();">
+            <input type="text" id="symptomInput" placeholder="Enter one symptom" required>
+            <button type="submit" class="btn">Search Remedy</button>
+        </form>
+        <div id="remedyResult" class="remedy-result"></div>
+    </div>
+
+    <div id="bmi" class="tab-content">
+        <h2>BMI Calculator</h2>
+        <form onsubmit="event.preventDefault(); calculateBMI();" class="bmi-form">
+            <input type="number" id="weight" placeholder="Enter weight (kg)" required>
+            <input type="number" id="height" placeholder="Enter height (cm)" required>
+            <button type="submit" class="btn">Calculate BMI</button>
+        </form>
+        <div id="bmiResult" class="bmi-result"></div>
+    </div>
+
+    <div id="feedback" class="tab-content">
+        <h2>Feedback</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <textarea placeholder="Your Feedback" rows="5" required></textarea>
+            <button type="submit" class="btn">Submit Feedback</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Ayurvedic Remedies Web Portal | All rights reserved.</p>
+</footer>
+
+<script>
+    function showTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.style.display = 'none';
+        });
+        document.getElementById(tabId).style.display = 'block';
+    }
+
+    // Default to show first tab
+    document.addEventListener("DOMContentLoaded", () => {
+        showTab('remedies');
+    });
+
+    function handleLogout() {
+        localStorage.removeItem("isLoggedIn");  // Remove login session
+        alert("You have been logged out!");
+        window.location.href = "index.html";  // Redirect to home page
+    }
+
+    // Symptom Remedies Logic
+    const remedies = {
+        "cough": "Mix honey and ginger juice, drink warm ajwain tea.",
+        "cold": "Drink herbal tea, inhale steam, gargle warm salt water.",
+        "fever": "Tulsi and honey, fenugreek water, warm bath.",
+        "headache": "Ginger paste, lavender oil, chamomile tea.",
+        "indigestion": "Warm water with lemon and ginger, peppermint tea."
+    };
+
+    function searchRemedy() {
+        const symptom = document.getElementById('symptomInput').value.toLowerCase();
+        const result = remedies[symptom] || 'No remedy found for this symptom';
+        document.getElementById('remedyResult').innerText = result;
+    }
+
+    // BMI Calculation Logic
+    function calculateBMI() {
+        const weight = parseFloat(document.getElementById('weight').value);
+        const height = parseFloat(document.getElementById('height').value) / 100;
+        if (!weight || !height) {
+            document.getElementById('bmiResult').innerText = 'Please enter valid values';
+            return;
+        }
+        const bmi = (weight / (height * height)).toFixed(2);
+        let category = '';
+        if (bmi < 16) category = 'Severely Underweight';
+        else if (bmi < 18.5) category = 'Underweight';
+        else if (bmi <= 24.9) category = 'Normal';
+        else if (bmi <= 29.9) category = 'Overweight';
+        else category = 'Obese';
+        document.getElementById('bmiResult').innerText = `Your BMI: ${bmi} (${category})`;
+    }
+</script>
+
+</body>
+</html>

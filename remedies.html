@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Remedies - Ayurvedic Remedies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>
+        <img src="images/logo.png" alt="Logo" class="logo-img">
+        Ayurvedic Remedies
+    </h1>
+    <nav>
+        <ul>
+           <!-- <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Signup</a></li>-->
+            <li><a href="remedies.html">Symptom Remedies</a></li>
+            <li><a href="bmi.html">BMI Calculator</a></li>
+            <!--<li><a href="yoga.html">Yoga Poses</a></li>-->
+            <li><a href="feedback.html">Feedback</a></li>
+            <!--<li><a href="contact.html">Contact</a></li>-->
+        </ul>
+    </nav>
+</header>
+
+<section class="remedy-section">
+    <h2>Symptom Remedies</h2>
+    <form class="remedy-form" onsubmit="event.preventDefault(); searchRemedy();">
+        <input type="text" id="symptomInput" placeholder="Enter one symptom" required>
+        <button type="submit">Search Remedy</button>
+    </form>
+    <div id="remedyResult" class="remedy-result"></div>
+</section>
+
+<script>
+    const remedies = {
+        "cough": "Mix honey and ginger juice, drink warm ajwain tea.",
+        "cold": "Drink herbal tea, inhale steam, gargle warm salt water.",
+        "fever": "Tulsi and honey, fenugreek water, warm bath.",
+        "headache": "Ginger paste, lavender oil, chamomile tea.",
+        "indigestion": "Warm water with lemon and ginger, peppermint tea."
+    };
+
+    function searchRemedy() {
+        const symptom = document.getElementById('symptomInput').value.toLowerCase();
+        const result = remedies[symptom] || 'No remedy found for this symptom';
+        document.getElementById('remedyResult').innerText = result;
+    }
+</script>
+
+<footer>
+    <p>&copy; 2025 Ayurvedic Remedies Web Portal | All rights reserved.</p>
+</footer>
+
+</body>
+</html>

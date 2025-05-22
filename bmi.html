@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator - Ayurvedic Remedies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>
+        <img src="images/logo.png" alt="Logo" class="logo-img">
+        Ayurvedic Remedies
+    </h1>
+    <nav>
+        <ul>
+            <!-- <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Signup</a></li>-->
+            <li><a href="remedies.html">Symptom Remedies</a></li>
+            <li><a href="bmi.html">BMI Calculator</a></li>
+            <!--<li><a href="yoga.html">Yoga Poses</a></li>-->
+            <li><a href="feedback.html">Feedback</a></li>
+            <!--<li><a href="contact.html">Contact</a></li>-->
+        </ul>
+    </nav>
+</header>
+
+<section class="bmi-section">
+    <h2>BMI Calculator</h2>
+    <form onsubmit="event.preventDefault(); calculateBMI();" class="bmi-form">
+        <input type="number" id="weight" placeholder="Enter weight (kg)" required>
+        <input type="number" id="height" placeholder="Enter height (cm)" required>
+        <button type="submit">Calculate BMI</button>
+    </form>
+    <div id="bmiResult" class="bmi-result"></div>
+</section>
+
+<script>
+    function calculateBMI() {
+        const weight = parseFloat(document.getElementById('weight').value);
+        const height = parseFloat(document.getElementById('height').value) / 100;
+        if (!weight || !height) {
+            document.getElementById('bmiResult').innerText = 'Please enter valid values';
+            return;
+        }
+        const bmi = (weight / (height * height)).toFixed(2);
+        let category = '';
+        if (bmi < 16) category = 'Severely Underweight';
+        else if (bmi < 18.5) category = 'Underweight';
+        else if (bmi <= 24.9) category = 'Normal';
+        else if (bmi <= 29.9) category = 'Overweight';
+        else category = 'Obese';
+        document.getElementById('bmiResult').innerText = `Your BMI: ${bmi} (${category})`;
+    }
+</script>
+
+<footer>
+    <p>&copy; 2025 Ayurvedic Remedies Web Portal | All rights reserved.</p>
+</footer>
+
+</body>
+</html>

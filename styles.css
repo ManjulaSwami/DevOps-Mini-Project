@@ -1,0 +1,599 @@
+/* Ayurvedic Remedies Portal CSS */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2fff2;
+    color: #2e4d2e;
+}
+header {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav ul li {
+    margin: 10px 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #4caf50;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul li a:hover {
+    background-color: #4caf50;
+    color: white;
+}
+section {
+    padding: 30px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+section h2 {
+    color: #3e733e;
+    border-bottom: 2px solid #b3e6b3;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+footer {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+/* Yoga Pose Section - Two Column Layout */
+.pose {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    background-color: #f5fff5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.pose-image {
+    flex: 1 1 40%;
+    padding: 10px;
+}
+.pose-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+.pose-info {
+    flex: 1 1 55%;
+    padding: 10px;
+}
+.pose-info h3 {
+    color: #2e5d2e;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.pose-info p {
+    font-size: 16px;
+    color: #3d3d3d;
+    line-height: 1.6;
+}
+@media (max-width: 768px) {
+    .pose {
+        flex-direction: column;
+    }
+    .pose-image, .pose-info {
+        flex: 1 1 100%;
+    }
+}
+/* Contact Page Styling */
+.contact-section {
+    padding: 30px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-section h2 {
+    color: #3e733e;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.contact-section form {
+    background-color: #f8fff8;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section form input,
+.contact-section form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+.contact-section form button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.contact-section form button:hover {
+    background-color: #3e8e41;
+}
+
+/* Responsive Contact Form */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-section form {
+        padding: 20px;
+    }
+}
+/* Feedback Page Styling */
+.feedback-section {
+    padding: 30px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.feedback-section h2 {
+    color: #3e733e;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.feedback-section form {
+    background-color: #f8fff8;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-section form input,
+.feedback-section form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+.feedback-section form button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.feedback-section form button:hover {
+    background-color: #3e8e41;
+}
+
+/* Responsive Feedback Form */
+@media (max-width: 768px) {
+    .feedback-section {
+        padding: 20px;
+    }
+
+    .feedback-section form {
+        padding: 20px;
+    }
+}
+/* Login Page Styling */
+.login-section {
+    padding: 30px;
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.login-section h2 {
+    text-align: center;
+    color: #3e733e;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.login-section form {
+    background-color: #f8fff8;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login-section form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+.login-section form button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.login-section form button:hover {
+    background-color: #3e8e41;
+}
+
+@media (max-width: 768px) {
+    .login-section {
+        padding: 20px;
+    }
+
+    .login-section form {
+        padding: 20px;
+    }
+}
+
+/* Signup Page Styling */
+.signup-section {
+    padding: 30px;
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.signup-section h2 {
+    text-align: center;
+    color: #3e733e;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.signup-section form {
+    background-color: #f8fff8;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.signup-section form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+.signup-section form button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.signup-section form button:hover {
+    background-color: #3e8e41;
+}
+
+@media (max-width: 768px) {
+    .signup-section {
+        padding: 20px;
+    }
+
+    .signup-section form {
+        padding: 20px;
+    }
+}
+
+/* Remedies Page Styling */
+.remedy-section {
+    padding: 30px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.remedy-section h2 {
+    color: #3e733e;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.remedy-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.remedy-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+.remedy-form button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remedy-form button:hover {
+    background-color: #3e8e41;
+}
+
+.remedy-result {
+    padding: 15px;
+    background-color: #f1fff1;
+    border: 1px solid #cceccc;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #2e5d2e;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* BMI Calculator Page Styling */
+.bmi-section {
+    padding: 30px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.bmi-section h2 {
+    color: #3e733e;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.bmi-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.bmi-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+.bmi-form button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bmi-form button:hover {
+    background-color: #3e8e41;
+}
+
+.bmi-result {
+    padding: 15px;
+    background-color: #f1fff1;
+    border: 1px solid #cceccc;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #2e5d2e;
+    font-weight: bold;
+    text-align: center;
+}
+/* Carousel Styling */
+.carousel {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-images {
+    display: flex;
+    width: 300%;
+    animation: slide 12s infinite;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Animation */
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
+}
+/* Carousel Section Styling */
+.carousel {
+    margin-top: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* Optional caption styling (if you add captions later) */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Carousel control button styling */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+/* Optional: improve spacing below carousel */
+.carousel + section {
+    margin-top: 30px;
+}
+.home-intro {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #2e5d2e;
+}
+/* Carousel Styling */
+.carousel {
+    margin-top: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 450px; /* Adjust height as needed */
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 20px;
+}
+.logo-img {
+    width: 50px; /* You can adjust the size as needed */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.signup-text {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.signup-text a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+.login-link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
